@@ -131,10 +131,7 @@ cursor: pointer;
   transition: 0.5s;
 }
 
-.collection-main{
-  border: 1px solid black;
- border: none;
-}
+
 
 .word-3{
   border: 1px solid black;
@@ -156,14 +153,16 @@ cursor: pointer;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+.main-3{
+  padding: 0 50px;
+}
 .collection-slide{
   display: grid;
-  height: 80vh;
   grid-template-columns: auto auto auto;
   justify-content: center;
   align-items: center;
-  gap: 70px;
-  padding: 20px 30px;
+  gap: 20px;
+  padding: 20px 40px;
 
 }
 
@@ -172,13 +171,13 @@ cursor: pointer;
 }
 .slid-images-1{
   border: 1px solid black;
-  height: 65vh;
-  width: 370px;
+  height: 68vh;
+  max-width: 370px;
   background-color: #f7f7f7;
   text-align: center;
   border: none;
   padding: 50px 30px;
-  /* transition: all 1s ease; */
+  transition: all 1s ease;
 }
 
 .collection-image{
@@ -199,28 +198,12 @@ cursor: pointer;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 1.2rem;
 }
-.input{
-  width: 100%;
-  margin-top: 10px;
-  display: none;
-  transition: 10s;
-  
-}
-
-.slid-images-1:hover{
-  .input{
-    display: block;
-   
-  }
-  .main-3 h2{
-    color: red;
-  }
-}
 
 .input select{
- padding: 0 30px;
- height: 30px;
-
+ padding: 0 20px;
+ max-height: 40px;
+color: rgb(140, 140, 140);
+border: 1px solid rgba(140, 140, 140, 0.493);
 }
 .input button{
   width: 100%;
@@ -231,6 +214,9 @@ cursor: pointer;
   border: none;
   cursor: pointer;
   transition: 0.5s;
+
+  
+ 
 }
 .input button:hover{
   background-color: transparent;
@@ -238,9 +224,93 @@ cursor: pointer;
   color: rgb(0, 0, 0);
 }
 
+.input{
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.8s ease;
+  width: 100%;
+  gap: 10px;
+  display: flex;
+  justify-content: center;
+flex-wrap: wrap;
+}
+
+.main-3:hover .input{
+  opacity: 1;
+  visibility: visible;
+}
+button a{
+  color: white;
+}
+button a:hover{
+  color: black;
+}
+
+.main-4{
+  border: 1px solid black;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  grid-template-columns: auto auto;
+  padding: 50px 30px;
+  border: none;
+}
+
+.men{
+  height: 540px;
+  overflow: hidden;
+}
+
+.men img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.men img:hover{
+   transform: scale(1.1);
+}
+
+.word-5{
+  border: 1px solid black;
+  height: 180px;
+  padding: 40px 120px;
+  background-color: #ffffff;
+  border: none;
+}
+
+
+.word-5 h2{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+
+}
+
+.word-5 h1{
+  font-size: 3.4rem;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
 
 
 
+
+
+
+
+
+/* RESPONSIVE */
+
+
+/* 992PX TO 1200PX */
+
+@media(min-width:992px) and (max-width:1200px){
+  .collection-slide{
+    grid-template-columns: auto auto;
+    
+  }
+}
 
 @media (min-width: 772px) and (max-width: 992px) {
   .first-menu-box {
@@ -250,13 +320,31 @@ cursor: pointer;
   .icon-list {
     display: none;
   }
+
   .menu {
     display: block;
   }
+
   .word-box1 h1{
     font-size: 3rem;
   }
+
+  .collection-slide{
+    grid-template-columns: auto auto;
+  }
 }
+
+
+@media (min-width:576px) and (max-width:800px){
+  .collection-slide{
+    grid-template-columns: auto ;
+    
+  }
+  .collection-image{
+    height: 280px;
+  }
+}
+
 
 @media (min-width: 576px) and (max-width: 772px) {
   .first-menu-box {
@@ -304,11 +392,11 @@ cursor: pointer;
    z-index: revert-layer;
    
   }
-
-
    .word-box1 h1{
     font-size: 2.5rem;
   }
+
+  
 }
 
 @media (min-width: 300px) and (max-width: 576px) {
@@ -365,5 +453,40 @@ cursor: pointer;
 
    .word-box1 h1{
     font-size: 1.8rem;
+  }
+}
+
+@media(max-width:576px){
+
+  .slid-images-1{
+    height: 64vh;
+  }
+  .main-4{
+    grid-template-columns: auto;
+  } 
+  
+  .word-3 h2{
+    font-size: 0.9rem;
+  }
+
+  .word-3 h1{
+    font-size: 1.8rem;
+  }
+
+
+
+  .word-5 h2{
+    font-size: 0.9rem;
+  }
+
+  .word-5 h1{
+    font-size: 1.8rem;
+  }
+   .collection-slide{
+    grid-template-columns: auto ;
+    
+  }
+  .collection-image{
+    height: 230px;
   }
 }
