@@ -169,11 +169,12 @@ cursor: pointer;
 .main-3{
   text-align: start;
 }
+
 .slid-images-1{
   border: 1px solid black;
   height: 68vh;
   max-width: 370px;
-  background-color: #f7f7f7;
+  background-color: #d1d1d1;
   text-align: center;
   border: none;
   padding: 50px 30px;
@@ -489,4 +490,13 @@ button a:hover{
   .collection-image{
     height: 230px;
   }
+
+  .slid-images-1{
+    height: 50vh;
+    padding: 10px 10px;
+  }
+  .collection-image{
+    height: 190px;
+  }
+
 }
