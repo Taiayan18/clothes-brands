@@ -32,4 +32,4 @@ setInterval(()=>{
     if(count ===img.length)
         count =0
     show()
-},4000)
+},3000)

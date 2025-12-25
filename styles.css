@@ -131,124 +131,6 @@ cursor: pointer;
   transition: 0.5s;
 }
 
-/* 
-
-.word-3{
-  border: 1px solid black;
-  height: 180px;
-  padding: 40px 120px;
-  background-color: #ffffff;
-  border: none;
-}
-
-.word-3 h2{
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-size: 1.4rem;
-  margin-bottom: 10px;
-
-}
-
-.word-3 h1{
-  font-size: 3.4rem;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-
-.main-3{
-  padding: 0 50px;
-}
-.collection-slide{
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  padding: 20px 40px;
-
-}
-
-.main-3{
-  text-align: start;
-}
-
-.slid-images-1{
-  border: 1px solid black;
-  height: 56vh;
-  width: 380px;
-  background-color: #d1d1d1;
-  display: grid;
-  justify-content: center;
-  border: none;
-  padding: 30px 35px;
-  transition: all 1s ease;
-}
-
-.collection-image{
-  height: 250px;
-  width: 250px;
-}
-
-.main-3 h2{
-  margin-top: 10px;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-size: 1.4rem;
-  margin-bottom: 8px;
-}
-.main-3 h2:hover{
-  color: red;
-}
-.main-3 h4{
-  color: red;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-size: 1.2rem;
-}
-
-.input select{
- padding: 0 20px;
- max-height: 40px;
-color: rgb(140, 140, 140);
-border: 1px solid rgba(140, 140, 140, 0.493);
-}
-.input button{
-  width: 100%;
-  color: white;
-  background-color: black;
-  margin-top: 8px;
-  height: 50px;
-  border: none;
-  cursor: pointer;
-  transition: 0.5s;
-
-  
- 
-}
-.input button:hover{
-  background-color: transparent;
-  border: 1px solid rgb(0, 0, 0);
-  color: rgb(0, 0, 0);
-}
-
-.input{
-  opacity: 0;
-  visibility: hidden;
-  transition: 0.8s ease;
-  width: 100%;
-  gap: 10px;
-  display: flex;
-  justify-content: center;
-flex-wrap: wrap;
-}
-
-.main-3:hover .input{
-  opacity: 1;
-  visibility: visible;
-}
-button a{
-  color: white;
-}
-button a:hover{
-  color: black;
-} */
-
 
 .trending{
   padding: 60px 20px;
@@ -276,6 +158,7 @@ button a:hover{
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
 }
+
 .product{
   text-align: left;
 }
@@ -337,7 +220,7 @@ button a:hover{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-.products h3:hover{
+.product-box:hover .product h3{
   color: red;
 }
 
@@ -395,9 +278,206 @@ button a:hover{
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+.women-images{
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.women-images img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+  position: absolute;
+  
+}
 
 
 
+
+.text{
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+
+.text h1{
+  font-size: 3.5rem;
+  margin-bottom: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 2px;
+}
+
+.text button{
+  border: 1px solid black;
+  height: 40px;
+  width: 250px;
+  font-size: 1rem;
+  background-color: black;
+  color: white;
+  text-align: center;
+  transition: 0.5s ease;
+}
+
+.text button:hover{
+  border:1px solid rgb(0, 0, 0);
+  background-color: white;
+  color: black;
+}
+
+.moving-div {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: black;
+  color: white;
+  padding: 1.8vw 0;
+  white-space: nowrap;
+}
+
+/* Track */
+.track {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 12s linear infinite;
+}
+
+/* Continuous animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Left blur */
+.blur-left {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20%;
+  height: 100%;
+  background: linear-gradient(to right, black, transparent);
+  z-index: 2;
+  pointer-events: none;
+}
+
+
+.blur-right {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 20%;
+  height: 100%;
+  background: linear-gradient(to left, black, transparent);
+  z-index: 10;
+  pointer-events: none;
+}
+
+
+.slide-main{
+  border: 6px solid goldenrod;
+  padding: 20px 80px;
+  display: grid;
+  grid-template-columns: auto auto;
+  width: 100%;
+
+}
+
+
+
+
+.first-1{
+  border: 1px solid black;
+  height: 600px;
+  width: 550px;
+  overflow: hidden;
+}
+
+.first-1 img{
+width: 100%;
+height: 100%;
+object-fit: cover;
+  transition: transform 0.5s ease;
+
+
+}
+
+.first-1 img:hover{
+  transform: scale(1.1);
+
+}
+.secound{
+  border: 1px solid black;
+  height: 600px;
+  width: 500px;
+  padding: 70px 0;
+  border: none;
+}
+
+.secound h2{
+  margin: 10px 30px 20px;
+}
+
+hr{
+  width: 90%;
+  margin: auto;
+}
+
+
+.secound h1{
+  margin: 20px ;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.secound p{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin: 20px;
+}
+
+.secound h3{
+   margin: 10px 30px 20px;
+  margin-top: 50px;
+  color: red;
+  font-size: 1.5rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.icon{
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.secound button{
+  height: 30px;
+  width: 180px;
+  margin-top: 10%;
+  background-color: black;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.secound button:hover{
+  background-color: transparent;
+  border: 1px solid black;
+  color: black;
+}
+
+.input-num input{
+  height: 30px;
+  width: 50px;
+  margin: 30px;
+  margin-top: 80px;
+  padding: 2px;
+}
 
 
 
@@ -407,6 +487,12 @@ button a:hover{
 @media(max-width:768px){
 .heading h1{
   font-size: 2.2rem;
+}
+.text h1{
+  font-size: 2.2rem;
+}
+.marquee span{
+  font-size: 1.rem;
 }
 }
 
