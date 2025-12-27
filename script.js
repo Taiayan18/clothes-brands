@@ -33,3 +33,10 @@ setInterval(()=>{
         count =0
     show()
 },3000)
+
+
+let feedback=document.getElementById("feedback")
+
+const feed=[
+  
+]

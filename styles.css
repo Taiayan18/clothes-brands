@@ -302,7 +302,7 @@ cursor: pointer;
   left: 50%;
   transform: translate(-50%,-50%);
   text-align: center;
-  color: rgb(0, 0, 0);
+  color: rgb(248, 248, 248);
 }
 
 .text h1{
@@ -317,16 +317,15 @@ cursor: pointer;
   height: 40px;
   width: 250px;
   font-size: 1rem;
-  background-color: black;
-  color: white;
+ 
   text-align: center;
   transition: 0.5s ease;
 }
 
 .text button:hover{
-  border:1px solid rgb(0, 0, 0);
-  background-color: white;
-  color: black;
+ background-color: black;
+  color: white;
+  
 }
 
 .moving-div {
@@ -382,11 +381,11 @@ cursor: pointer;
 
 
 .slide-main{
-  border: 6px solid goldenrod;
-  padding: 20px 80px;
+  padding: 20px 90px;
   display: grid;
   grid-template-columns: auto auto;
   width: 100%;
+  
 
 }
 
@@ -396,7 +395,7 @@ cursor: pointer;
 .first-1{
   border: 1px solid black;
   height: 600px;
-  width: 550px;
+  width: 450px;
   overflow: hidden;
 }
 
@@ -416,7 +415,7 @@ object-fit: cover;
 .secound{
   border: 1px solid black;
   height: 600px;
-  width: 500px;
+  width: 450px;
   padding: 70px 0;
   border: none;
 }
@@ -439,6 +438,7 @@ hr{
 .secound p{
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   margin: 20px;
+  font-size: 0.8rem;
 }
 
 .secound h3{
@@ -453,6 +453,7 @@ hr{
   padding: 0 30px;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 5px;
 }
 
@@ -478,6 +479,105 @@ hr{
   margin-top: 80px;
   padding: 2px;
 }
+
+
+
+.slider-main2{
+  border: 1px solid black;
+  padding: 50px 0;
+  display: grid;
+  grid-template-columns: auto auto;
+  background-color: #f7f7f7;
+  border: none;
+}
+
+.box-4{
+  border: 1px solid black;
+  width: 520px;
+  margin: auto;
+  overflow: hidden;
+  object-fit: cover;
+  gap: 20px;
+  padding: 30px 10px;
+  border: none;
+}
+
+.box-4 h1{
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.box-4 p{
+  font-size: 0.9rem;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 20px;
+}
+
+.box-4 img{
+  width: 100%;
+  height: 100%;
+}
+
+.icon2{
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.icon2 img{
+  width: 130px;
+}
+
+/* .comment{
+  border: 1px solid black;
+  height: 500px;
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.commit-1{
+  width: 40%;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.commit-1 p{
+
+  margin: 50px ;
+} */
+
+
+.testimonial-slider{
+  padding: 100px 5%;
+  overflow: hidden;
+  min-height: 500px;
+  display: flex;
+  justify-content: center;
+}
+
+.comment{
+  width: 100%;
+  min-width: 700px;
+  text-align: center;
+  color: var(--white-color);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -511,6 +611,30 @@ hr{
 
   .word-box1 h1{
     font-size: 3rem;
+  }
+  
+  .slide-main{
+    grid-template-columns: auto;
+  }
+
+  .first-1{
+    width: 100%;
+  }
+  .secound{
+    width: 100%;
+  }
+
+  .box-4{
+    width: 370px;
+  }
+
+
+  .box-4 h1 {
+    font-size: 1.8rem;
+  }
+
+    .box-4 p {
+    font-size: 0.7rem;
   }
 
 }
@@ -568,11 +692,38 @@ hr{
     font-size: 2.5rem;
   }
 
+    .slide-main{
+    grid-template-columns: auto;
+  }
+
+  .first-1{
+    width: 100%;
+  }
+  .secound{
+    width: 100%;
+  }
+
+  .slider-main2 {
+    grid-template-columns: auto;
+  }
+  .box-4{
+    width: 100%;
+    text-align: center;
+
+  }
+
+  .icon2{
+    justify-content: center;
+    margin-top: 50px;
+  }
+
   
 }
 
-@media (min-width: 300px) and (max-width: 576px) {
-  .first-menu-box {
+
+@media(max-width:576px){
+
+   .first-menu-box {
     font-size: 0.9rem;
   }
   ul .offer {
@@ -626,9 +777,7 @@ hr{
    .word-box1 h1{
     font-size: 1.8rem;
   }
-}
 
-@media(max-width:576px){
 
   .slid-images-1{
     height: 64vh;
@@ -658,6 +807,43 @@ hr{
   .product-box img{
     height: 200px;
   }
+
+    .slide-main{
+    grid-template-columns: auto;
+    padding: 20px 20px;
+  }
+
+  .first-1{
+    width: 90%;
+  }
+  .secound{
+    width: 90%;
+  }
+
+   .slider-main2 {
+    grid-template-columns: auto;
+    padding: 20px;
+  }
+  .box-4{
+    width: 100%;
+   
+    text-align: center;
+
+  }
+
+  .box-4 h1{
+    font-size: 1.5rem;
+  }
+  .box-4 p{
+    font-size: 0.8rem;
+  }
+
+  .icon2{
+    justify-content: center;
+    margin-top: 50px;
+  }
+  
+
 
 
 }
