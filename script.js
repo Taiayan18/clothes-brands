@@ -35,8 +35,66 @@ setInterval(()=>{
 },3000)
 
 
-let feedback=document.getElementById("feedback")
+let testimonialItems = document.querySelectorAll(".testimonial-item");
+let nextbtn = document.querySelector("#btn-next");
+let prevbtn = document.querySelector("#btn-prev");
 
-const feed=[
-  
-]
+let current = 0;
+
+function showcount(index){
+  testimonialItems.forEach(item => item.classList.remove("active"));
+  testimonialItems[index].classList.add("active");
+}
+
+nextbtn.addEventListener("click", () => {
+  current++;
+  if (current >= testimonialItems.length) {
+    current = 0;
+  }
+  showcount(current);
+});
+
+prevbtn.addEventListener("click", () => {
+  current--;
+  if (current < 0) {
+    current = testimonialItems.length - 1;
+  }
+  showcount(current);
+});
+
+
+setInterval(()=>{
+  current ++
+  if(current>=testimonialItems.length)
+    current=0
+  showcount(current)
+},3000)
+
+
+
+// function toggleAns() {
+//   let ans = document.querySelector(".ans");
+
+//   if (ans.style.display === "block") {
+//     ans.style.display = "none";
+//     icon.classList.replace("fa-minus", "fa-plus");
+//   } else {
+//     ans.style.display = "block";
+//     icon.classList.replace("fa-plus", "fa-minus");
+//   }
+// }
+
+
+function toggleAns(element) {
+  const ans = element.querySelector(".ans");
+  const icon = element.querySelector("i");
+
+  if (ans.style.display === "block") {
+    ans.style.display = "none";
+    icon.classList.replace("fa-minus", "fa-plus");
+  } else {
+    ans.style.display = "block";
+    icon.classList.replace("fa-plus", "fa-minus");
+  }
+}
+
