@@ -72,19 +72,6 @@ setInterval(()=>{
 
 
 
-// function toggleAns() {
-//   let ans = document.querySelector(".ans");
-
-//   if (ans.style.display === "block") {
-//     ans.style.display = "none";
-//     icon.classList.replace("fa-minus", "fa-plus");
-//   } else {
-//     ans.style.display = "block";
-//     icon.classList.replace("fa-plus", "fa-minus");
-//   }
-// }
-
-
 function toggleAns(element) {
   const ans = element.querySelector(".ans");
   const icon = element.querySelector("i");
