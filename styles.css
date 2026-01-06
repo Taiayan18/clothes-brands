@@ -654,6 +654,11 @@ hr {
   
 }
 
+footer{
+  background-color: black;
+  padding: 30px;
+}
+
 .footer-main{
   background-color: black;
   border: 1px solid black;
@@ -692,6 +697,7 @@ h4{
 }
 
 .input-box{
+  display: flex;
   border: 1px solid grey;
   margin-top: 20px;
   padding: 5px;
@@ -699,6 +705,7 @@ h4{
   gap: 30px;
 
 }
+
 input{
   background: transparent;
   width: 59%;
@@ -706,6 +713,7 @@ input{
   border: none;
   height: 100%;
   color: white;
+  flex: 1;
 }
 .input-box button{
   width: 120px;
@@ -725,6 +733,20 @@ input{
   margin-top: 30px;
 }
 
+
+.footer-images{
+  margin-block: 30px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.line{
+  border: 1px solid rgba(255, 255, 255, 0.297);
+  width: 100%;
+  margin-top: 30px;
+}
 
 
 
@@ -798,6 +820,9 @@ input{
     font-size: 1rem;
   }
 }
+
+
+
 
 
 
