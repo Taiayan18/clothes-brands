@@ -632,6 +632,7 @@ hr {
   width: 60%;
   border-bottom: 1px solid rgba(0, 0, 0, 0.389);
   padding: 10px 0;
+ 
 }
 
 .span{
@@ -639,6 +640,7 @@ hr {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 800;
   padding: 0 20px;
+  
 }
 
 .que-1 i{
@@ -952,8 +954,8 @@ input{
     font-size: 25px;
   }
 
-  .first ul li {
-    padding: 30px 0;
+  .first  li {
+    padding: 15px 0;
   }
 
   a {
